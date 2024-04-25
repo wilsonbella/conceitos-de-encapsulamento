@@ -1,5 +1,7 @@
+import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.exercicios.*;
 import br.com.alura.screenmatch.modelos.Filme;
+import br.com.alura.screenmatch.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
@@ -55,6 +57,29 @@ public class Principal {
         livro.setAutor("Carlos Andrade");
         livro.exibirDetalhes();
 
+        Serie sobrenatural = new Serie();
+        sobrenatural.setNome("Sobrenatural");
+        sobrenatural.setAnoDeLancamento(2001);
+        sobrenatural.exibeFichaTecnica();
+        sobrenatural.setTemporadas(10);
+        sobrenatural.setEpisodiosPorTemporada(10);
+        sobrenatural.setMinutosPorEpisodios(20);
+        System.out.println("A duração da série: " + sobrenatural.getDuracaoEmMinutos());
+
+
+        CalculadoraDeTempo calculadoraDeTempo = new CalculadoraDeTempo();
+        calculadoraDeTempo.inclui(meuFilme);
+        System.out.println(calculadoraDeTempo.getTempoTotal());
+
+        ModeloCarro modeloCarro = new ModeloCarro();
+        modeloCarro.definiModeloCarro("Sedan");
+        modeloCarro.setNome("Corsa");
+        modeloCarro.setAno(2000);
+        modeloCarro.setCor("Prata");
+        modeloCarro.definiPreco(25000, 30000, 45000);
+        modeloCarro.calculaPrecoMenor();
+        modeloCarro.calculaPrecoMaior();
+        modeloCarro.exibiInfoCarro();
 
 
 
